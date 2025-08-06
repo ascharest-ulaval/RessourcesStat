@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Ressources pour enseigner la statistique"
+  navbar:
+    left:
+      - href: Secondaire.qmd
+        text: Secondaire
+      - href: Cegep.qmd
+        text: Cégep
+      - href: Nouvelles.qmd
+        text: Statistique à la une
+      - href: Ressources.qmd
+        text: Ressources
+  page-navigation: true
+  back-to-top-navigation: true
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-title: "Contenu"

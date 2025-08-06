@@ -1,0 +1,17 @@
+---
+title: "Ressources"
+format: html
+---
+
+Voici une liste commentée de diverses ressources au sujet de l'enseignement de la statistique. 
+
+A venir
+
+## Articles scientifiques 
+
+## Jeux de données 
+
+## Activités d'enseignement 
+
+## Logiciels 
+

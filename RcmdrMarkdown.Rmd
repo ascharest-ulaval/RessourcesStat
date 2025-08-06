@@ -1,0 +1,42 @@
+<!-- R Commander Markdown Template -->
+
+Replace with Main Title
+=======================
+
+### ASCHA10
+
+### `r as.character(Sys.Date())`
+
+```{r echo=FALSE}
+# include this code chunk as-is to set options
+knitr::opts_chunk$set(comment=NA, prompt=TRUE, out.width=750, fig.height=8, fig.width=8)
+library(Rcmdr)
+library(car)
+library(RcmdrMisc)
+```
+
+
+### Normal Quantiles
+```{r}
+qnorm(c(0.95), mean=0, sd=1, lower.tail=TRUE)
+```
+
+```{r}
+data(Credit, package="ISLR")
+```
+
+
+### Single-Sample t-Test: Education
+```{r}
+with(Credit, (t.test(Education, alternative='two.sided', mu=0.0, 
+  conf.level=.95)))
+```
+
+
+### Nuage de points: Age~Balance | Student
+```{r}
+scatterplot(Age~Balance | Student, regLine=FALSE, smooth=FALSE, 
+  boxplots=FALSE, by.groups=TRUE, data=Credit)
+```
+Oh, quelle ligne suprenante en zéro!
+

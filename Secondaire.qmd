@@ -1,0 +1,21 @@
+---
+title: ""
+format: html
+---
+
+## Activités à essayer en classe
+
+Dans le cours <a href= "https://www.ulaval.ca/etudes/cours/stt-2902-modelisation-statistique" target = "_blank"> STT-2902 Modélisation statistique </a> que j'ai donné à plusieurs reprises aux futurs enseignants de mathématiques au secondaire certains étudiant ont préparé des activités pouvant être utilisées dans les classes. Je vous en partage quelques-unes, avec l'accord des auteurs. Vous pouvez les utiliser telles qu'elles ou vous en inspirer pour vos propres cours. 
+
+[Slow Reveal Graph- Téléchargements de Tik Tok ](https://drive.google.com/file/d/1EtNki81zP_vx6ZuafEGcK4hlMsckxNGB/view?usp=drive_link){target="_blank" .dropbox}
+L'idée d'un Slow Reveal Graph est de présenter graduellement les différentes parties d'un graphique statistique et d'amener les étudiants à voir ce que chacune peut leur apprendre sur les données. Jenna Laib, une enseignante américaine de mathématiques au secondaire, compile sur un site web plein d'exemples de telles activités (en anglais seulement) : <a href= "https://slowrevealgraphs.com/" target = "_blank"> Slow Reveal Graphs </a>
+
+## GRMS 2020 - Atelier sur la régression
+
+Lors du congrès virtuel du <a href= "https://www.grms.qc.ca/" target = "_blank"> Groupe des Responsables en Mathématiques au Secondaire </a> en 2020, j'ai fait une présentation sur les différentes méthodes de régression enseignée au secondaire. J'y décris les trois méthodes, en mettant l'accent sur leurs origines, et on les compare d'un point de vue statistique. Voici les diapos et une petite étude de simulation partagée lors de la présentation.
+
+[Droite de régression : comprendre et évaluer différentes méthodes](https://www.dropbox.com/scl/fi/ttxme0p4weuzdp32m07en/GRMS___2020___M-thodes_de_r-gression.pdf?rlkey=g46v15dyt756lxudcod6mb9ih&dl=0){target="_blank" .dropbox}
+
+[Simulation pour comparer les trois méthodes](https://www.dropbox.com/scl/fi/7gpoy0w0c9lv3153jg4w8/Demo_3_methodes.html?rlkey=ib087xtb6qiqidvmwee5mgfxe&dl=0){target="_blank" .dropbox}
+
+[Code source pour la simulation (en R)](https://www.dropbox.com/scl/fi/ppe1nlzpcp7vorqjqhkrl/Demo-3-methodes.Rmd?rlkey=y7cxrttbmcq454pvaxxgvweqq&dl=0){target="_blank" .dropbox}
