@@ -2,28 +2,28 @@
 title: ""
 ---
 
+## CanCOTS 2025
+
+Les ressources que j'ai partagées lors du <a href= "https://cancots.netlify.app/fr/" target = "_blank"> Congrès canadien sur l'enseignement de la statistique</a>  à l'ÉTS en juin 2025 se retrouvent dans la présentation **Outils et données : la statistique en pratique** préparée pour les conférences de l'AMQ au printemps 2025 (à télécharger ci-dessous).
+
 ## Conférences pour l'AMQ - printemps 2025
 
-Au printemps 2025, j'ai fait en collaboration avec l'<a href= "https://www.amq.math.ca/" target = "_blank"> Association Mathématique du Québec</a> une série de trois conférences sur la statistique spécifiquement conçues pour les enseignants au cégep. Je partage ici les diapos de ces conférences. 
+Au printemps 2025, j'ai fait en collaboration avec l'<a href= "https://www.amq.math.ca/" target = "_blank"> Association Mathématique du Québec</a> une série de trois conférences sur la statistique spécifiquement conçues pour les enseignants au cégep. Je partage ici les diapos de ces conférences.
 
+[Inférence statistique : Au-delà des formules](https://www.dropbox.com/scl/fi/lou8zbv8x9wd8xa3x5fiy/ConferenceAMQ_1.pdf?rlkey=b0gu1bj6ed42r0baio54pladu&st=sao1se5n&dl=0){.dropbox target="_blank"}
 
-[Inférence statistique : Au-delà des formules](https://www.dropbox.com/scl/fi/lou8zbv8x9wd8xa3x5fiy/ConferenceAMQ_1.pdf?rlkey=b0gu1bj6ed42r0baio54pladu&st=sao1se5n&dl=0){target="_blank" .dropbox}
+[Passion régression](https://www.dropbox.com/scl/fi/zbxusge8rmmolv9oakbew/ConferenceAMQ_2.pdf?rlkey=2rk0c4if4xxgq20nja9ol6jc4&dl=0){.dropbox target="_blank"}
 
-[Passion régression](https://www.dropbox.com/scl/fi/zbxusge8rmmolv9oakbew/ConferenceAMQ_2.pdf?rlkey=2rk0c4if4xxgq20nja9ol6jc4&dl=0){target="_blank" .dropbox}
+[Outils et données : la statistique en pratique](https://www.dropbox.com/scl/fi/bith8o8i8mjym2ua6ar6i/ConferenceAMQ_3.pdf?rlkey=zotwuj94w5jvvsyek0e4r38o7&dl=0){.dropbox target="_blank"}
 
-[Outils et données : la statistique en pratique](https://www.dropbox.com/scl/fi/bith8o8i8mjym2ua6ar6i/ConferenceAMQ_3.pdf?rlkey=zotwuj94w5jvvsyek0e4r38o7&dl=0){target="_blank" .dropbox}
+## Congrès de l'AMQ 2024
 
+Au <a href= "https://congres2024.amq.math.ca/" target = "_blank"> congrès 2024 de l'AMQ </a>, j'ai co-animé le groupe de travail La statistique au cégep : des idées pour le nouveau cours. Voici les diapos de ma présentation au début de celui-ci: [Enseigner la statistique au post-secondaire](https://www.dropbox.com/scl/fi/4nvyg99anq5a7zgk2mqgm/2024_AMQ_EnseignerStats_Charest.pdf?rlkey=bn9brz27m4qfrr0tari10kwxj&dl=0){.dropbox target="_blank"}
 
-## Congrès de l'AMQ 2024 
+J'ai aussi fait une courte présentation sur l'évaluation du travail d'équipes pour le groupe de travail Projets synthèses en mathématiques pour le programme de Sciences de la nature : [Évaluation du travail d'équipe](https://www.dropbox.com/scl/fi/kpnpqxzs5hl1l3lt015z9/2024_AMQ_TravailEquipe_Charest.pdf?rlkey=cqkwhyi5mg5ey7lebght0quw0&dl=0){.dropbox target="_blank"}
 
-Au <a href= "https://congres2024.amq.math.ca/" target = "_blank"> congrès 2024 de l'AMQ </a>, j'ai co-animé le groupe de travail La statistique au cégep : des idées pour le nouveau cours. Voici les diapos de ma présentation au début de celui-ci: [Enseigner la statistique au post-secondaire](https://www.dropbox.com/scl/fi/4nvyg99anq5a7zgk2mqgm/2024_AMQ_EnseignerStats_Charest.pdf?rlkey=bn9brz27m4qfrr0tari10kwxj&dl=0){target="_blank" .dropbox}
-
-J'ai aussi fait une courte présentation sur l'évaluation du travail d'équipes pour le groupe de travail Projets synthèses en mathématiques pour le programme de Sciences de la nature : [Évaluation du travail d'équipe](https://www.dropbox.com/scl/fi/kpnpqxzs5hl1l3lt015z9/2024_AMQ_TravailEquipe_Charest.pdf?rlkey=cqkwhyi5mg5ey7lebght0quw0&dl=0){target="_blank" .dropbox}
-
-Enfin, j'ai participé à la conférence d'ouverture du congrès, en parlant de ce qui me passionne dans mon travail. Article à venir à ce sujet dans le <a href= "https://www.amq.math.ca/bulletin/" target = "_blank"> Bulletin de l'AMQ. </a>  
+Enfin, j'ai participé à la conférence d'ouverture du congrès, en parlant de ce qui me passionne dans mon travail. Article à venir à ce sujet dans le <a href= "https://www.amq.math.ca/bulletin/" target = "_blank"> Bulletin de l'AMQ. </a>
 
 ## Article Bulletin de l'AMQ - Méthodes de ré-échantillonnage
 
-À la suite d’une conférence sur le sujet présentée lors d'un congrès de l’<a href="https://www.amq.math.ca/" target="_blank">Association Mathématique du Québec</a>, j’ai rédigé pour le bulletin un article portant sur deux méthodes d’inférence par rééchantillonnage : le test de permutation et le test bootstrap. Ces deux exemples illustrent qu’il est possible de réaliser une inférence statistique sans recourir à la loi normale, contrairement à ce que le contenu habituel des cours de cégep pourrait laisser croire. L’article ne traite donc pas directement de la matière enseignée au cégep, mais il peut contribuer à mieux comprendre certains concepts liés aux tests d’hypothèse, notamment la valeur-p. 
-
-
+À la suite d’une conférence sur le sujet présentée lors d'un congrès de l’<a href="https://www.amq.math.ca/" target="_blank">Association Mathématique du Québec</a>, j’ai rédigé pour le bulletin un article portant sur deux méthodes d’inférence par rééchantillonnage : le test de permutation et le test bootstrap. Ces deux exemples illustrent qu’il est possible de réaliser une inférence statistique sans recourir à la loi normale, contrairement à ce que le contenu habituel des cours de cégep pourrait laisser croire. L’article ne traite donc pas directement de la matière enseignée au cégep, mais il peut contribuer à mieux comprendre certains concepts liés aux tests d’hypothèse, notamment la valeur-p.

@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "À propos",
     "section": "",
-    "text": "Je suis Anne-Sophie Charest, professeure de statistique à l’Université Laval. J’enseigne cette discipline avec plaisir depuis plusieurs années. Au fil du temps, j’ai non seulement approfondi mes connaissances en statistique, mais aussi réfléchi aux meilleures façons de l’enseigner. J’ai lu, échangé avec des collègues, testé des approches, et accumulé du matériel ainsi que des idées pour rendre l’apprentissage plus concret et engageant.\nJ’ai créé ce site pour partager ces ressources, les rendre plus accessibles et faciles à utiliser par toutes celles et ceux qui enseignent la statistique, particulièrement en français au Québec. Vous y trouverez :\n\ndes présentations et documents de formation sur la statistique;\ndes idées pour des activités à utiliser en classe;\ndes jeux de données et exemples concrets;\ndes ressources reperées ailleurs, parfois adaptées ou traduites.\n\nCertaines sections du site regroupent des ressources destinées plus spécifiquement à l’enseignement au secondaire ou au cégep, tandis que d’autres présentent du contenu d’intérêt plus général. Ces catégories ne sont pas hermétiques : sentez-vous libre de parcourir l’ensemble du site pour y découvrir ce qui pourrait enrichir votre enseignement.\nCe site a été lancé en août 2025 et sera mis à jour régulièrement afin d’intégrer de nouvelles idées, documents et exemples au fil de mes lectures et de mes échanges avec la communauté enseignante.\nN’hésitez pas à m’écrire si vous avez des commentaires ou des suggestions, ou que vous trouvez des erreurs dans le contenu du site!\n\n\n\n Back to top"
+    "text": "Je suis Anne-Sophie Charest, professeure de statistique à l’Université Laval. J’enseigne cette discipline avec plaisir depuis plusieurs années. Au fil du temps, j’ai non seulement approfondi mes connaissances en statistique, mais aussi réfléchi aux meilleures façons de l’enseigner. J’ai lu, échangé avec des collègues, testé des approches, et accumulé du matériel ainsi que des idées pour rendre l’apprentissage plus concret et engageant.\nJ’ai créé ce site pour partager ces ressources, les rendre plus accessibles et faciles à utiliser par toutes celles et ceux qui enseignent la statistique, particulièrement en français au Québec. Vous y trouverez :\n\ndes présentations et documents de formation sur la statistique;\ndes idées pour des activités à utiliser en classe;\ndes jeux de données et exemples concrets;\ndes ressources reperées ailleurs, parfois adaptées ou traduites.\n\nCertaines sections du site regroupent des ressources destinées plus spécifiquement à l’enseignement au secondaire ou au cégep, tandis que d’autres présentent du contenu d’intérêt plus général. Ces catégories ne sont pas hermétiques : sentez-vous libre de parcourir l’ensemble du site pour y découvrir ce qui pourrait enrichir votre enseignement.\nSITE EN CONSTRUCTION!\nCe site a été lancé en août 2025 et sera complété au courant de l’automne 2025. Il sera ensuite mis à jour régulièrement afin d’intégrer de nouvelles idées, documents et exemples au fil de mes lectures et de mes échanges avec la communauté enseignante.\nN’hésitez pas à m’écrire si vous avez des commentaires ou des suggestions, ou que vous trouvez des erreurs dans le contenu du site!\n\n\n\n Back to top"
   },
   {
     "objectID": "page1.html#présentations-pour-lamq-printemps-2025",
@@ -67,14 +67,14 @@
     "href": "Cegep.html",
     "title": "Ressources pour enseigner la statistique",
     "section": "",
-    "text": "Au printemps 2025, j’ai fait en collaboration avec l’ Association Mathématique du Québec une série de trois conférences sur la statistique spécifiquement conçues pour les enseignants au cégep. Je partage ici les diapos de ces conférences.\nInférence statistique : Au-delà des formules\nPassion régression\nOutils et données : la statistique en pratique"
+    "text": "Les ressources que j’ai partagées lors du  Congrès canadien sur l’enseignement de la statistique à l’ÉTS en juin 2025 se retrouvent dans la présentation Outils et données : la statistique en pratique préparée pour les conférences de l’AMQ au printemps 2025 (à télécharger ci-dessous)."
   },
   {
     "objectID": "Cegep.html#conférences-pour-lamq---printemps-2025",
     "href": "Cegep.html#conférences-pour-lamq---printemps-2025",
     "title": "Ressources pour enseigner la statistique",
-    "section": "",
-    "text": "Au printemps 2025, j’ai fait en collaboration avec l’ Association Mathématique du Québec une série de trois conférences sur la statistique spécifiquement conçues pour les enseignants au cégep. Je partage ici les diapos de ces conférences.\nInférence statistique : Au-delà des formules\nPassion régression\nOutils et données : la statistique en pratique"
+    "section": "Conférences pour l’AMQ - printemps 2025",
+    "text": "Conférences pour l’AMQ - printemps 2025\nAu printemps 2025, j’ai fait en collaboration avec l’ Association Mathématique du Québec une série de trois conférences sur la statistique spécifiquement conçues pour les enseignants au cégep. Je partage ici les diapos de ces conférences.\nInférence statistique : Au-delà des formules\nPassion régression\nOutils et données : la statistique en pratique"
   },
   {
     "objectID": "Cegep.html#congrès-de-lamq-2024",
@@ -222,5 +222,19 @@
     "title": "Ressources",
     "section": "Logiciels",
     "text": "Logiciels"
+  },
+  {
+    "objectID": "Cegep.html#congrès-canadien-sur-lenseignement-de-la-statistique-cancots-2025",
+    "href": "Cegep.html#congrès-canadien-sur-lenseignement-de-la-statistique-cancots-2025",
+    "title": "Ressources pour enseigner la statistique",
+    "section": "",
+    "text": "Les ressources partagées lors de ce congrès se retrouvent dans la présentation Outils et données : la statistique en pratique préparée pour les conférences de l’AMQ au printemps 2025 (voir ci-dessous)."
+  },
+  {
+    "objectID": "Cegep.html#cancots-2025",
+    "href": "Cegep.html#cancots-2025",
+    "title": "Ressources pour enseigner la statistique",
+    "section": "",
+    "text": "Les ressources que j’ai partagées lors du  Congrès canadien sur l’enseignement de la statistique à l’ÉTS en juin 2025 se retrouvent dans la présentation Outils et données : la statistique en pratique préparée pour les conférences de l’AMQ au printemps 2025 (à télécharger ci-dessous)."
   }
 ]
