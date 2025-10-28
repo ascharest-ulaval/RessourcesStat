@@ -2,6 +2,10 @@
 title: ""
 ---
 
+## Congrès de l'AMQ 2025
+
+Au <a href= "https://congres2025.amq.math.ca/" target = "_blank"> congrès 2025 de l'AMQ </a>, j'ai présenté un atelier sur l'impact des données incomplètes pour l'estimation de paramètres et les méthodes d'imputation utiles pour y remédier : [Faire parler les données...même quand il en manque](https://www.dropbox.com/scl/fi/1ru3eub0orsust8r3hwuh/2025_AMQ_Donn-esManquantes.pdf?rlkey=jeb2iynxaxrhf5wogb4zpvfni&dl=0){.dropbox target="_blank"}
+
 ## CanCOTS 2025
 
 Les ressources que j'ai partagées lors du <a href= "https://cancots.netlify.app/fr/" target = "_blank"> Congrès canadien sur l'enseignement de la statistique</a>  à l'ÉTS en juin 2025 se retrouvent dans la présentation **Outils et données : la statistique en pratique** préparée pour les conférences de l'AMQ au printemps 2025 (à télécharger ci-dessous).
