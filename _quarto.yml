@@ -14,10 +14,10 @@ website:
         text: Cégep
       - href: Nouvelles.qmd
         text: Statistique à la une
-      - href: Ressources.qmd
-        text: Ressources
       - href: Applets.qmd
         text: Applets
+      - href: Ressources.qmd
+        text: Liens intéressants
   page-navigation: true
   back-to-top-navigation: true
 
