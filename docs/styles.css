@@ -57,3 +57,34 @@ a.dropbox::after {
 a.dropbox {
   color: #0061FF; /* Bleu officiel Dropbox */
 }
+
+.home-intro {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin-bottom: 1.25rem;
+}
+
+.home-portrait {
+  display: block;
+  width: 160px;
+  height: 160px;
+  border-radius: 0.5rem;
+}
+
+.home-bio > p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .home-intro {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .home-portrait {
+    width: 128px;
+    height: 128px;
+  }
+}
