@@ -5,10 +5,19 @@ format: html
 
 ## Activités à essayer en classe
 
-Dans le cours <a href= "https://www.ulaval.ca/etudes/cours/stt-2902-modelisation-statistique" target = "_blank"> STT-2902 Modélisation statistique </a> que j'ai donné à plusieurs reprises aux futurs enseignants de mathématiques au secondaire certains étudiant ont préparé des activités pouvant être utilisées dans les classes. Je vous en partage quelques-unes, avec l'accord des auteurs. Vous pouvez les utiliser telles qu'elles ou vous en inspirer pour vos propres cours. 
+### Quel est l'intrus? (QELI)
 
-[Slow Reveal Graph- Téléchargements de Tik Tok ](https://drive.google.com/file/d/1EtNki81zP_vx6ZuafEGcK4hlMsckxNGB/view?usp=drive_link){target="_blank" .dropbox}
-L'idée d'un Slow Reveal Graph est de présenter graduellement les différentes parties d'un graphique statistique et d'amener les étudiants à voir ce que chacune peut leur apprendre sur les données. Jenna Laib, une enseignante américaine de mathématiques au secondaire, compile sur un site web plein d'exemples de telles activités (en anglais seulement) : <a href= "https://slowrevealgraphs.com/" target = "_blank"> Slow Reveal Graphs </a>
+Quatre éléments, quatre intrus possibles : les élèves choisissent un intrus et justifient leur choix, puis cherchent une justification pour chacune des autres cases. Ces activités mobilisent des notions de statistique et de probabilités. Des pistes de justification et des questions de relance sont proposées dans des encadrés destinés à l'enseignant.
+
+[Accéder aux activités QELI](QELI.qmd)
+
+### Slow Reveal Graph
+
+L'idée d'un *Slow Reveal Graph* est de présenter graduellement les différentes parties d'un graphique statistique et d'amener les élèves à voir ce que chacune peut leur apprendre sur les données. Jenna Laib propose de nombreux exemples de ces activités sur le site [Slow Reveal Graphs](https://slowrevealgraphs.com/){target="_blank"}, en anglais.
+
+L'exemple ci-dessous a été préparé par une étudiante du cours [STT-2902 Modélisation statistique](https://www.ulaval.ca/etudes/cours/stt-2902-modelisation-statistique){target="_blank"}, destiné aux futurs enseignants de mathématiques au secondaire. Je le partage avec son accord. Vous pouvez l'utiliser tel quel ou vous en inspirer pour vos propres cours.
+
+[Téléchargements de TikTok](https://drive.google.com/file/d/1EtNki81zP_vx6ZuafEGcK4hlMsckxNGB/view?usp=drive_link){target="_blank" .dropbox}
 
 ## GRMS 2020 - Atelier sur la régression
 

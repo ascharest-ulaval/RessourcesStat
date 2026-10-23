@@ -5,7 +5,9 @@ format: html
 
 Voici une liste commentée de diverses ressources au sujet de l'enseignement de la statistique. 
 
-A venir
+## Données Bleues
+
+Je collabore au développement et à la diffusion de [Données Bleues](https://donneesbleues.ca/), où je contribue des documents, des activités et des jeux de données pour l'enseignement de la statistique.
 
 ## Articles scientifiques 
 
