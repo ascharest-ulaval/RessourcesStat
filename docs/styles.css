@@ -79,12 +79,22 @@ a.dropbox {
 
 @media (max-width: 600px) {
   .home-intro {
-    grid-template-columns: 1fr;
+    grid-template-columns: 112px minmax(0, 1fr);
     gap: 1rem;
   }
 
   .home-portrait {
-    width: 128px;
-    height: 128px;
+    width: 112px;
+    height: 112px;
   }
+}
+
+.home-intro > p {
+  grid-column: 1;
+  margin-bottom: 0;
+}
+
+.home-intro > .home-bio {
+  grid-column: 2;
+  grid-row: 1;
 }
