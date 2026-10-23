@@ -1,19 +1,160 @@
 ---
 title: "Ressources"
-format: html
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    toc-expand: true
+    include-in-header:
+      text: |
+        <style>
+        .resource-sections {
+          display: flex;
+          flex-wrap: wrap;
+          gap: .55rem;
+          margin: 1rem 0 1.5rem;
+        }
+        .resource-sections a {
+          display: block;
+          padding: .55rem .85rem;
+          border: 1px solid #1B264F;
+          border-radius: .35rem;
+          text-decoration: none;
+          font-weight: 600;
+          background: #f2f5fa;
+        }
+        .resource-sections a:hover,
+        .resource-sections a:focus-visible {
+          background: #1B264F;
+          color: white;
+        }
+        #TOC > ul > li:first-child > ul,
+        #TOC > ul > li:nth-child(2) > ul {
+          display: block !important;
+          height: auto !important;
+          visibility: visible !important;
+        }
+        </style>
 ---
 
-Voici une liste commentée de diverses ressources au sujet de l'enseignement de la statistique. 
+Une sélection de ressources pour trouver des données, préparer des activités et réfléchir à l’enseignement de la statistique. La langue est indiquée pour chaque ressource.
 
-## Données Bleues
+```{=html}
+<nav class="resource-sections" aria-label="Catégories de ressources">
+  <a href="#activites">Activités et idées pour la classe</a>
+  <a href="#donnees">Trouver des données</a>
+  <a href="#articles">La statistique en contexte</a>
+  <a href="#enseignement">Réfléchir à l’enseignement de la statistique</a>
+</nav>
+```
 
-Je collabore au développement et à la diffusion de [Données Bleues](https://donneesbleues.ca/), où je contribue des documents, des activités et des jeux de données pour l'enseignement de la statistique.
+## Activités et idées pour la classe {#activites}
 
-## Articles scientifiques 
+### Recensement à l’école
 
-## Jeux de données 
+**Français et anglais** · [Consulter le site](https://censusatschool.ca/fr/)\
+Un projet qui permet aux élèves de découvrir les enquêtes et l’analyse de données. Vous pouvez faire participer votre classe à un questionnaire et exploiter les données recueillies pour formuler des questions statistiques et comparer des groupes.
 
-## Activités d'enseignement 
+### Cartes de données
 
-## Logiciels 
+**Anglais** · [Les cartes de données : présentation et exemples](https://new.censusatschool.org.nz/resource/data-cards/), par Pip Arnold, sur CensusAtSchool New Zealand\
+Chaque carte représente un individu ou un objet et rassemble les valeurs de plusieurs variables. Les élèves peuvent manipuler les cartes, les trier et les disposer pour construire des graphiques, comparer des groupes ou explorer des relations entre variables. Les cartes peuvent favoriser la construction de représentations plus riches : dans l’étude de [Harradine et Konold (2006)](https://srri.umass.edu/publications/harradine-2006hrm/), les élèves qui utilisaient des cartes de données ont produit des représentations qui tendaient à être plus complexes et plus informatives que celles des élèves travaillant au crayon sur papier.
+
+Un exemple : les [Robot Cards](https://dataschools.education/resource/robot-cards/), proposées par Data Education in Schools (en anglais). Cette ressource comprend 99 cartes de robots à imprimer, accompagnées d’un guide et de suggestions d’activités. Conçues pour le primaire, elles permettent notamment de passer du classement des cartes à la construction de diagrammes à bandes et de nuages de points.
+
+### Concours d’affiches et de projets statistiques de l’ASA
+
+**Anglais** · [Concours d’affiches : modalités et participation](https://www.amstat.org/education/asa-data-visualization-poster-competition-for-grades-k-12-) · [Concours de projets : modalités et participation](https://www.amstat.org/education/asa-statistics-project-competition-for-grades-7-12)\
+Vous pouvez faire participer vos élèves aux concours annuels de l’American Statistical Association, ouverts aux élèves résidant au Canada ou aux États-Unis. Le concours d’affiches s’adresse aux élèves du primaire et du secondaire, et celui de projets écrits aux élèves du secondaire. Une occasion de mener une investigation statistique et de communiquer les résultats à un public extérieur à la classe. Les pages officielles présentent les règles et les formulaires de participation. Les [affiches et projets primés en 2026](https://magazine.amstat.org/blog/2026/08/03/2026-poster-and-statistics-projects/) peuvent aussi servir d’inspiration ou de points de départ pour discuter de la démarche suivie et des choix de représentation.
+
+### Slow Reveal Graphs
+
+**Principalement en anglais** · [Consulter la collection](https://slowrevealgraphs.com/)\
+Jenna Laib rassemble des graphiques dévoilés progressivement pour amener les élèves à construire et à réviser leur interprétation. Chaque nouvelle partie du graphique nourrit la discussion sur les données et leur représentation. Un [exemple en français est présenté dans la section Secondaire](Secondaire.qmd#slow-reveal-graph).
+
+### What’s Going On in This Graph?
+
+**Anglais** · [Explorer les graphiques](https://www.nytimes.com/column/whats-going-on-in-this-graph)\
+Une rubrique du New York Times, réalisée en collaboration avec l’American Statistical Association, pour discuter de graphiques en classe. Les élèves observent un graphique, décrivent ce qu’ils remarquent et formulent des questions avant de découvrir le contexte et les explications. L’[ASA propose aussi une présentation de la démarche](https://www.amstat.org/whats-going-on-in-this-graph).
+
+### GeoGebra
+
+**Page en anglais** · [Activités de probabilités et statistique](https://www.geogebra.org/math/statistics-probability)\
+Une sélection de ressources interactives pour explorer les notions de probabilités et de statistique, organisée par niveau scolaire. Les élèves peuvent manipuler les représentations et explorer les effets de différents choix ou paramètres.
+
+### Desmos : activités sur Amplify Classroom
+
+**Pages en anglais** · [Explorer Amplify Classroom](https://classroom.amplify.com/) · [Sélection d’activités de NGPF](https://www.ngpf.org/math/amplify/)\
+Les activités de Desmos Classroom sont maintenant regroupées sur Amplify Classroom. La plateforme permet d’utiliser et d’adapter des activités interactives pour la classe. Pour trouver plus directement des activités de statistique et de probabilités, la sélection de Next Gen Personal Finance (NGPF) propose notamment des activités sur les histogrammes, les diagrammes en boîte et les expériences aléatoires, dans des contextes de finances personnelles.
+
+## Trouver des données {#donnees}
+
+### Québec et Canada
+
+- **[Données Bleues](https://donneesbleues.ca/) · Français** : des jeux de données et des ressources pour l’enseignement de la statistique, notamment dans des contextes québécois.
+- **[Données Québec](https://www.donneesquebec.ca/) · Français** : données ouvertes du gouvernement et des municipalités, notamment sur le transport et l’environnement. Une source pour construire des activités autour de contextes locaux.
+- **[Statistique Canada](https://www150.statcan.gc.ca/n1/fr/type/donnees) · Français et anglais** : tableaux, microdonnées et visualisations sur la population, la société et l’économie canadiennes.
+- **[Institut de la statistique du Québec](https://statistique.quebec.ca/fr) · Français** : données et indicateurs pour explorer la société québécoise.
+- **[Données climatiques historiques](https://climat.meteo.gc.ca/) · Français et anglais** : températures, précipitations et autres mesures météorologiques pour plusieurs endroits au Canada.
+
+### Comparaisons internationales
+
+- **[Our World in Data](https://ourworldindata.org/explorers) · Anglais** : des explorateurs de données regroupant plusieurs indicateurs par thème. Pour comparer des pays, examiner des tendances et discuter du choix des indicateurs.
+- **[Gapminder](https://www.gapminder.org/teaching/) · Anglais** : données, visualisations et matériel pédagogique pour explorer le monde. Une piste en classe : faire formuler des prédictions aux élèves, puis les confronter aux données. Les [données sont aussi téléchargeables](https://www.gapminder.org/data/).
+- **[Banque mondiale](https://donnees.banquemondiale.org/) · Français disponible** : indicateurs pour comparer les pays et étudier leur évolution.
+- **[OCDE](https://www.oecd.org/fr/data.html) · Français disponible** : données internationales sur l’éducation, la santé, l’économie et d’autres thèmes.
+
+### Alimentation et sport
+
+- **[Open Food Facts](https://fr.openfoodfacts.org/) · Français disponible** : données sur les produits alimentaires, avec possibilité de sélectionner et de télécharger un sous-ensemble. Par exemple, comparer la teneur en sucre de différentes catégories de céréales.
+- **[Ligue nationale de hockey (LNH)](https://www.nhl.com/stats/fr) · Français disponible** : statistiques officielles de hockey. Une source à explorer pour construire des comparaisons en classe.
+- **[Baseball Reference](https://www.baseball-reference.com/) · Anglais** : statistiques de joueurs, d’équipes et de saisons. Pour comparer des distributions ou explorer des relations entre mesures de performance.
+
+### Jeux de données pour l’enseignement
+
+- **[Data and Story Library (DASL)](https://dasl.datadescription.com/) · Anglais** : jeux de données accompagnés d’éléments de contexte, avec recherche par méthode statistique.
+- **[Kaggle](https://www.kaggle.com/datasets) · Principalement en anglais** : une banque de jeux de données partagés par la communauté sur des sujets variés. Pour choisir un jeu de données à utiliser en classe, examiner sa provenance, sa documentation et les conditions de réutilisation.
+
+## La statistique en contexte {#articles}
+
+### Accromath
+
+**Français**. Une sélection de lectures pour découvrir des applications de la statistique et amorcer des discussions en classe.
+
+- [Le langage visuel de la statistique](https://accromath.uqam.ca/2021/10/le-langage-visuel-de-la-statistique/) : l’histoire des graphiques et de leur rôle dans la présentation des données (André Ross, 2021).
+- [L’utilisation d’indices pour combiner des informations](https://accromath.uqam.ca/2022/09/lutilisation-dindices-pour-combiner-des-informations/) : résumer plusieurs mesures pour décrire le climat, les inégalités ou la biodiversité (Christiane Rousseau, 2022).
+- [Le dépistage par groupe](https://accromath.uqam.ca/2020/09/le-depistage-par-groupe/) : combiner des prélèvements pour réduire le nombre de tests nécessaires (Christian Genest et Christiane Rousseau, 2020).
+- [Statistique et santé publique](https://accromath.uqam.ca/2021/02/statistique-et-sante-publique/) : des pionniers qui ont utilisé les données pour étudier la mortalité et la santé des populations (André Ross, 2021).
+- [Aspects statistiques de la gestion forestière](https://accromath.uqam.ca/2011/01/aspects-statistiques-de-la-gestion-forestiere/) : recueillir des données sur les forêts pour guider leur aménagement (Pierre Bernier et Louis-Paul Rivest, 2011).
+- [Un modèle statistique pour la gestion des stocks de poissons](https://accromath.uqam.ca/2011/06/un-modele-statistique-pour-la-gestion-des-stocks-de-poissons/) : modéliser les populations de poissons pour établir des quotas de pêche (Thierry Duchesne et Louis-Paul Rivest, 2011).
+- [Que le meilleur gagne!](https://accromath.uqam.ca/2020/02/que-le-meilleur-gagne/) : les chances que la meilleure équipe de hockey remporte une série, selon son format (Christian Genest, 2020).
+- [L’union fait la force](https://accromath.uqam.ca/2019/01/lunion-fait-la-force/) : combiner des modèles simples pour améliorer les prévisions, avec les forêts aléatoires (Christian Genest et Jean-François Plante, 2019).
+
+### Québec Science
+
+**Français** · [Corrélation, coïncidence ou causalité?](https://www.quebecscience.qc.ca/14-17-ans/encyclo/correlation-coincidence-ou-causalite/)\
+Des exemples pour distinguer une association entre deux variables d’une relation de cause à effet, dans la rubrique destinée aux 14–17 ans.
+
+### Agence Science-Presse
+
+**Français** · [Distinguer corrélation et causalité](https://formations.sciencepresse.qc.ca/fr/blogue-details/correlation-et-causalite), par Kathleen Couillard\
+Le rôle des facteurs confondants et les limites des conclusions tirées d’une association, à partir d’exemples du quotidien et d’études en santé.
+
+## Réfléchir à l’enseignement de la statistique {#enseignement}
+
+### Rapports GAISE : American Statistical Association
+
+**Anglais** · [Consulter les rapports](https://www.amstat.org/education/guidelines-for-assessment-and-instruction-in-statistics-education-%28gaise%29-reports)\
+Des recommandations pour l’enseignement et l’évaluation en statistique. La page rassemble les rapports destinés à l’enseignement scolaire et à l’enseignement supérieur.
+
+### Les données et leur production
+
+**Français** · [Lire l’article](https://www.persee.fr/doc/staso_2108-6745_2017_num_8_2_1369)\
+Une réflexion sur la place de la production des données dans l’enseignement de la statistique. Noëlle Zendrera, Véronique Dubreil-Frémont, Jean-Marie Marion et Alain Bihan-Poudec (2017), « Les données et leur production : réflexions sur une lacune paradoxale en éducation statistique », *Statistique et Enseignement*, 8(2), 59–78.
+
+### Teach statistics before calculus! : Arthur Benjamin
+
+**Anglais** · [Regarder la conférence](https://www.ted.com/talks/arthur_benjamin_teach_statistics_before_calculus)\
+Dans cette conférence TED de 2009, Arthur Benjamin défend une plus grande place pour la statistique dans la formation mathématique. Une prise de position pour amorcer une réflexion sur les objectifs de cet enseignement.
 
