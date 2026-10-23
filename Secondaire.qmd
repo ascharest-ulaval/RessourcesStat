@@ -11,6 +11,12 @@ Quatre éléments, quatre intrus possibles : les élèves choisissent un intrus 
 
 [Accéder aux activités QELI](QELI.qmd)
 
+### Menu Math
+
+Les élèves construisent des séries de données, des diagrammes, des expériences ou des jeux en respectant une liste de contraintes, avec le moins d'ajouts ou de créations possible. Dix menus de statistique et de probabilités sont proposés, accompagnés de solutions possibles, de justifications du minimum et de pistes pour les enseignants.
+
+[Accéder aux Menu Math](MenuMath.qmd)
+
 ### Slow Reveal Graph
 
 L'idée d'un *Slow Reveal Graph* est de présenter graduellement les différentes parties d'un graphique statistique et d'amener les élèves à voir ce que chacune peut leur apprendre sur les données. Jenna Laib propose de nombreux exemples de ces activités sur le site [Slow Reveal Graphs](https://slowrevealgraphs.com/){target="_blank"}, en anglais.
