@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="220" viewBox="0 0 320 220">
+  <rect width="320" height="220" rx="10" fill="#f2f5fa"/>
+  <g stroke="#dce3ed" stroke-width="1">
+    <path d="M40 45H295 M40 85H295 M40 125H295 M40 165H295 M90 25V185 M150 25V185 M210 25V185 M270 25V185"/>
+  </g>
+  <path d="M40 25V185H295" fill="none" stroke="#76849a" stroke-width="1.5"/>
+  <g fill="none" stroke-width="3">
+    <path d="M45 167L290 48" stroke="#cc6b29"/>
+    <path d="M45 179L290 36" stroke="#298778"/>
+    <path d="M45 158L290 57" stroke="#6554aa"/>
+  </g>
+  <g fill="#253653" stroke="#f2f5fa" stroke-width="1.5">
+    <circle cx="57" cy="165" r="4.5"/><circle cx="76" cy="144" r="4.5"/>
+    <circle cx="98" cy="159" r="4.5"/><circle cx="118" cy="128" r="4.5"/>
+    <circle cx="133" cy="145" r="4.5"/><circle cx="152" cy="110" r="4.5"/>
+    <circle cx="175" cy="117" r="4.5"/><circle cx="193" cy="88" r="4.5"/>
+    <circle cx="214" cy="103" r="4.5"/><circle cx="236" cy="66" r="4.5"/>
+    <circle cx="260" cy="77" r="4.5"/><circle cx="278" cy="44" r="4.5"/>
+  </g>
+  <text x="167" y="208" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#536177">Trois méthodes, trois droites</text>
+</svg>

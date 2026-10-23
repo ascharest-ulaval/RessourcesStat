@@ -1,0 +1,155 @@
+id: meteo-quebec
+title: "Météo quotidienne à Québec"
+short_title: "Météo Québec"
+theme: "Météorologie"
+source_name: "UlavalSSD::MeteoQuebec, construit avec weathercan à partir d'ECCC"
+source_url: "https://climate.weather.gc.ca/historical_data/search_historic_data_e.html"
+source_weathercan_url: "https://github.com/ropensci/weathercan"
+source_license_url: "https://climate.weather.gc.ca/prods_servs/attachment1_e.html"
+source_package_url: "https://github.com/AurelienNicosiaULaval/UlavalSSD"
+license: "Données ECCC soumises à l'entente de licence d'ECCC; paquet UlavalSSD sous licence MIT"
+access_date: "2026-06-21"
+geography: "Station Québec/Jean-Lesage, Québec"
+unit: "Observation météorologique quotidienne pour la station Québec/Jean-Lesage"
+data_type: "Série temporelle quotidienne, météorologique et tabulaire"
+format: "Objet data.frame dans UlavalSSD 0.2.0; CSV préparé localement"
+n_rows: "20 111 observations quotidiennes préparées"
+n_cols: "15 colonnes préparées; 11 colonnes dans l'objet UlavalSSD source"
+processed_file: "data/processed/meteo-quebec/meteo_quebec.csv"
+missing_summary_file: "data/processed/meteo-quebec/valeurs_manquantes_meteo_quebec.csv"
+season_summary_file: "data/processed/meteo-quebec/resume_saisons_meteo_quebec.csv"
+update_frequency: "Jeu pédagogique gelé dans UlavalSSD 0.2.0; source ECCC mise à jour régulièrement"
+level: Introduction
+level_ids:
+- introduction
+organisme: "Environnement et Changement climatique Canada; adaptation pédagogique dans UlavalSSD"
+territoire: "Québec/Jean-Lesage"
+taille_approximative: "20 111 observations quotidiennes, de 1970-01-01 à 2025-01-22"
+niveau_pedagogique_recommande: "Introduction"
+variables_principales:
+  - "date"
+  - "annee"
+  - "mois"
+  - "saison"
+  - "max_temp"
+  - "mean_temp"
+  - "min_temp"
+  - "total_precip"
+  - "total_rain"
+  - "total_snow"
+  - "snow_grnd"
+idees_mini_projets:
+  - "Comparer les températures moyennes quotidiennes selon les saisons."
+  - "Visualiser l'évolution annuelle des précipitations totales."
+  - "Décrire les valeurs manquantes avant de comparer pluie, neige et précipitations."
+tags:
+  - "météo"
+  - "Québec"
+  - "séries temporelles"
+  - "statistiques descriptives"
+  - "visualisation"
+  - "valeurs manquantes"
+concepts:
+- Séries temporelles
+- Variables numériques
+- Valeurs manquantes
+- Statistiques descriptives
+- Visualisation
+- Saisonnalité
+- Données météorologiques
+- Communication prudente
+concept_ids:
+- series-temporelles
+- variables-numeriques
+- valeurs-manquantes
+- statistiques-descriptives
+- visualisation
+- saisonnalite
+- donnees-meteorologiques
+- communication-prudente
+zero_waste:
+  contexte_quebecois: 3
+  accessibilite_pedagogique: 3
+  qualite_documentaire: 3
+  potentiel_nettoyage: 3
+  potentiel_visualisation: 3
+  potentiel_statistique_descriptive: 3
+  potentiel_inference: 2
+  potentiel_modelisation: 2
+  potentiel_ethique: 2
+  reutilisabilite: 3
+contributor_name: "Aurélien Nicosia"
+contributor_role: "Révision pédagogique et statistique"
+stt1100_contact: true
+status: "source pédagogique vérifiée dans UlavalSSD 0.2.0; préparation locale reproductible"
+notes: "Jeu utilisé dans STT-1100. Ne pas extrapoler à tout le Québec : il s'agit d'une station. Les variables total_rain, total_snow et snow_grnd contiennent beaucoup de valeurs manquantes."
+
+publication:
+  preview: true
+  reviewed_on: '2026-09-05'
+  license_url: https://climat.meteo.gc.ca/prods_servs/attachment1_f.html
+  preview_columns:
+  - source_dataset
+  - station_label
+  - date
+  - annee
+  - mois_num
+  - mois
+  - jour
+  - saison
+  - max_temp
+  - mean_temp
+  reason: Extrait pédagogique limité aux colonnes déclarées; attribution et conditions de la source conservées.
+  classroom:
+    mode: frozen
+    reason: Table de classe limitée aux colonnes déclarées, sans tirage supplémentaire de lignes. Attribution
+      et conditions tierces conservées.
+    files:
+    - path: data/processed/meteo-quebec/meteo_quebec.csv
+      columns:
+      - source_dataset
+      - station_label
+      - date
+      - annee
+      - mois_num
+      - mois
+      - jour
+      - saison
+      - max_temp
+      - mean_temp
+      - min_temp
+      - total_precip
+      - total_rain
+      - total_snow
+      - snow_grnd
+    - path: data/processed/meteo-quebec/resume_saisons_meteo_quebec.csv
+      columns:
+      - saison
+      - 'n'
+      - mean_temp_moyenne
+      - ecart_type_temperature
+      - precipitation_moyenne
+    - path: data/processed/meteo-quebec/valeurs_manquantes_meteo_quebec.csv
+      columns:
+      - variable
+      - n_missing
+      - n_rows
+      - pct_missing
+chart:
+  type: scatter
+  x_variable: date
+  y_variable: mean_temp
+  x_kind: date
+  x_label: Date de l’observation
+  y_label: Température moyenne quotidienne (°C)
+  title: Températures aux dates retenues
+date_added: "2026-06-20"
+date_updated: "2026-09-13"
+
+summary: Observations météorologiques quotidiennes de la station Québec/Jean-Lesage, dans la version fixe MeteoQuebec
+  d’UlavalSSD 0.2.0.
+
+observation_period: Du 1er janvier 1970 au 22 janvier 2025 dans la trousse
+
+source_authors:
+- Environnement et Changement climatique Canada

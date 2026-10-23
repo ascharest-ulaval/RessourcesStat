@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Applet de puissance - test sur une moyenne</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 24px;
+      background: #f7f7fb;
+      color: #111827;
+    }
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 22px;
+    }
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 28px;
+    }
+    .subtitle {
+      margin: 0;
+      color: #4b5563;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    .control {
+      margin-bottom: 18px;
+    }
+    .control label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .control .value {
+      color: #374151;
+      font-weight: 500;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      background: white;
+      font-size: 15px;
+    }
+    .results {
+      margin-top: 10px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      line-height: 1.55;
+    }
+    .results strong {
+      font-size: 18px;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .line-swatch {
+      width: 18px;
+      height: 0;
+      border-top: 4px solid black;
+    }
+    .box-swatch {
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+    }
+    .note {
+      font-size: 14px;
+      color: #4b5563;
+      margin-top: 10px;
+    }
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: white;
+      border-radius: 14px;
+    }
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Puissance d’un test sur une moyenne</h1>
+      <p class="subtitle">Distribution normale, écart-type populationnel connu, visualisation de la zone de rejet et de la puissance.</p>
+    </div>
+
+    <div class="card grid">
+      <div>
+        <div class="control">
+          <label for="typeTest">Type de test</label>
+          <select id="typeTest">
+            <option value="gauche">Test unilatéral à gauche</option>
+            <option value="droite" selected>Test unilatéral à droite</option>
+            <option value="bilateral">Test bilatéral</option>
+          </select>
+        </div>
+
+        <div class="control">
+          <label for="mu0">μ₀ : <span class="value" id="mu0Value"></span></label>
+          <input id="mu0" type="range" min="-3" max="3" step="0.1" value="0">
+        </div>
+
+        <div class="control">
+          <label for="mu1">μ₁ : <span class="value" id="mu1Value"></span></label>
+          <input id="mu1" type="range" min="-3" max="3" step="0.1" value="1">
+        </div>
+
+        <div class="control">
+          <label for="sigma">σ : <span class="value" id="sigmaValue"></span></label>
+          <input id="sigma" type="range" min="0.5" max="3" step="0.1" value="1">
+        </div>
+
+        <div class="control">
+          <label for="n">n : <span class="value" id="nValue"></span></label>
+          <input id="n" type="range" min="5" max="100" step="1" value="25">
+        </div>
+
+        <div class="control">
+          <label for="alpha">α : <span class="value" id="alphaValue"></span></label>
+          <input id="alpha" type="range" min="0.01" max="0.20" step="0.01" value="0.05">
+        </div>
+
+        <div class="results" id="results"></div>
+        <div class="note">Les courbes représentent la distribution de \(\bar X\) sous \(H_0\) et sous \(H_1\).</div>
+      </div>
+
+      <div>
+        <svg id="graph" viewBox="0 0 920 470" aria-label="Graphique de puissance"></svg>
+        <div class="legend">
+          <div class="legend-item"><span class="line-swatch" style="border-top-color:#2563eb"></span>Distribution de x̄ sous H₀</div>
+          <div class="legend-item"><span class="line-swatch" style="border-top-color:#dc2626"></span>Distribution de x̄ sous H₁</div>
+          <div class="legend-item"><span class="box-swatch" style="background:rgba(59,130,246,0.28)"></span>Zone de rejet sous H₀</div>
+          <div class="legend-item"><span class="box-swatch" style="background:rgba(239,68,68,0.30)"></span>Puissance sous H₁</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+function erf(x) {
+  const sign = x >= 0 ? 1 : -1;
+  x = Math.abs(x);
+  const a1 = 0.254829592;
+  const a2 = -0.284496736;
+  const a3 = 1.421413741;
+  const a4 = -1.453152027;
+  const a5 = 1.061405429;
+  const p = 0.3275911;
+  const t = 1 / (1 + p * x);
+  const y = 1 - (((((a5 * t + a4) * t + a3) * t + a2) * t + a1) * t) * Math.exp(-x * x);
+  return sign * y;
+}
+
+function densiteNormale(x, mu = 0, sigma = 1) {
+  const z = (x - mu) / sigma;
+  return Math.exp(-0.5 * z * z) / (sigma * Math.sqrt(2 * Math.PI));
+}
+
+function repartitionNormale(x, mu = 0, sigma = 1) {
+  return 0.5 * (1 + erf((x - mu) / (sigma * Math.sqrt(2))));
+}
+
+function quantileNormal(p) {
+  if (p <= 0 || p >= 1) {
+    throw new Error("p doit être dans (0,1)");
+  }
+  const a = [-39.69683, 220.9461, -275.9285, 138.3578, -30.6648, 2.506628];
+  const b = [-54.4761, 161.5858, -155.699, 66.80131, -13.28068];
+  const c = [-0.00778489, -0.3223964, -2.400758, -2.549733, 4.374664, 2.938164];
+  const d = [0.0077847, 0.3224671, 2.445134, 3.754409];
+  const plow = 0.02425;
+  const phigh = 1 - plow;
+  let q, r;
+
+  if (p < plow) {
+    q = Math.sqrt(-2 * Math.log(p));
+    return (((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) /
+           ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1);
+  }
+  if (p > phigh) {
+    q = Math.sqrt(-2 * Math.log(1 - p));
+    return -(((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) /
+            ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1);
+  }
+  q = p - 0.5;
+  r = q * q;
+  return (((((a[0] * r + a[1]) * r + a[2]) * r + a[3]) * r + a[4]) * r + a[5]) * q /
+         (((((b[0] * r + b[1]) * r + b[2]) * r + b[3]) * r + b[4]) * r + 1);
+}
+
+const mu0Input = document.getElementById("mu0");
+const mu1Input = document.getElementById("mu1");
+const sigmaInput = document.getElementById("sigma");
+const nInput = document.getElementById("n");
+const alphaInput = document.getElementById("alpha");
+const typeTestInput = document.getElementById("typeTest");
+
+const mu0Value = document.getElementById("mu0Value");
+const mu1Value = document.getElementById("mu1Value");
+const sigmaValue = document.getElementById("sigmaValue");
+const nValue = document.getElementById("nValue");
+const alphaValue = document.getElementById("alphaValue");
+const results = document.getElementById("results");
+const graph = document.getElementById("graph");
+
+function formatNombre(x, dec = 2) {
+  return Number(x).toFixed(dec).replace(".", ",");
+}
+
+function elt(tag, attrs = {}, text = null) {
+  const el = document.createElementNS("http://www.w3.org/2000/svg", tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    el.setAttribute(k, v);
+  }
+  if (text !== null) {
+    el.textContent = text;
+  }
+  return el;
+}
+
+function update() {
+  const mu0 = parseFloat(mu0Input.value);
+  const mu1 = parseFloat(mu1Input.value);
+  const sigma = parseFloat(sigmaInput.value);
+  const n = parseInt(nInput.value, 10);
+  const alpha = parseFloat(alphaInput.value);
+  const typeTest = typeTestInput.value;
+
+  mu0Value.textContent = formatNombre(mu0, 1);
+  mu1Value.textContent = formatNombre(mu1, 1);
+  sigmaValue.textContent = formatNombre(sigma, 1);
+  nValue.textContent = n;
+  alphaValue.textContent = formatNombre(alpha, 2);
+
+  const sigmaX = sigma / Math.sqrt(n);
+  const zcrit = typeTest === "bilateral" ? quantileNormal(1 - alpha / 2) : quantileNormal(1 - alpha);
+  const borneDroite = mu0 + zcrit * sigmaX;
+  const borneGauche = mu0 - zcrit * sigmaX;
+
+  let puissance;
+  if (typeTest === "droite") {
+    puissance = 1 - repartitionNormale(borneDroite, mu1, sigmaX);
+  } else if (typeTest === "gauche") {
+    puissance = repartitionNormale(borneGauche, mu1, sigmaX);
+  } else {
+    puissance = repartitionNormale(borneGauche, mu1, sigmaX) + (1 - repartitionNormale(borneDroite, mu1, sigmaX));
+  }
+
+  let texteZone;
+  if (typeTest === "droite") {
+    texteZone = `Région de rejet : x̄ ≥ ${formatNombre(borneDroite)}`;
+  } else if (typeTest === "gauche") {
+    texteZone = `Région de rejet : x̄ ≤ ${formatNombre(borneGauche)}`;
+  } else {
+    texteZone = `Région de rejet : x̄ ≤ ${formatNombre(borneGauche)} ou x̄ ≥ ${formatNombre(borneDroite)}`;
+  }
+
+  results.innerHTML = `
+    <div><strong>Puissance ≈ ${formatNombre(puissance, 3)}</strong></div>
+    <div>${texteZone}</div>
+    <div>Écart-type de x̄ : ${formatNombre(sigmaX, 3)}</div>
+  `;
+
+  const largeur = 920;
+  const hauteur = 470;
+  const marge = { haut: 20, droite: 22, bas: 65, gauche: 55 };
+  const largeurInterne = largeur - marge.gauche - marge.droite;
+  const hauteurInterne = hauteur - marge.haut - marge.bas;
+
+  const xMin = Math.min(mu0, mu1) - 4.5 * sigmaX;
+  const xMax = Math.max(mu0, mu1) + 4.5 * sigmaX;
+
+  const xToSvg = (x) => marge.gauche + ((x - xMin) / (xMax - xMin)) * largeurInterne;
+  const yMax = Math.max(densiteNormale(mu0, mu0, sigmaX), densiteNormale(mu1, mu1, sigmaX)) * 1.15;
+  const yToSvg = (y) => hauteur - marge.bas - (y / yMax) * hauteurInterne;
+  const axeY = yToSvg(0);
+
+  graph.innerHTML = "";
+
+  graph.appendChild(elt("line", {
+    x1: marge.gauche, y1: axeY,
+    x2: largeur - marge.droite, y2: axeY,
+    stroke: "black", "stroke-width": "1.5"
+  }));
+
+  function cheminAire(mu, condition) {
+    const pas = (xMax - xMin) / 600;
+    const pts = [];
+    for (let x = xMin; x <= xMax; x += pas) {
+      if (condition(x)) {
+        pts.push([xToSvg(x), yToSvg(densiteNormale(x, mu, sigmaX))]);
+      }
+    }
+    if (pts.length === 0) return "";
+    const debutX = pts[0][0];
+    const finX = pts[pts.length - 1][0];
+    const baseY = yToSvg(0);
+    let d = `M ${debutX} ${baseY} `;
+    for (const [x, y] of pts) d += `L ${x} ${y} `;
+    d += `L ${finX} ${baseY} Z`;
+    return d;
+  }
+
+  function polylinePoints(mu) {
+    const pas = (xMax - xMin) / 400;
+    const pts = [];
+    for (let x = xMin; x <= xMax; x += pas) {
+      pts.push(`${xToSvg(x)},${yToSvg(densiteNormale(x, mu, sigmaX))}`);
+    }
+    return pts.join(" ");
+  }
+
+  const cheminAlphaDroite = cheminAire(mu0, x => x >= borneDroite);
+  const cheminPuissanceDroite = cheminAire(mu1, x => x >= borneDroite);
+  const cheminAlphaGauche = cheminAire(mu0, x => x <= borneGauche);
+  const cheminPuissanceGauche = cheminAire(mu1, x => x <= borneGauche);
+
+  function addPath(d, fill) {
+    if (!d) return;
+    graph.appendChild(elt("path", { d, fill }));
+  }
+
+  if (typeTest === "droite") {
+    addPath(cheminAlphaDroite, "rgba(59,130,246,0.28)");
+    addPath(cheminPuissanceDroite, "rgba(239,68,68,0.30)");
+  } else if (typeTest === "gauche") {
+    addPath(cheminAlphaGauche, "rgba(59,130,246,0.28)");
+    addPath(cheminPuissanceGauche, "rgba(239,68,68,0.30)");
+  } else {
+    addPath(cheminAlphaGauche, "rgba(59,130,246,0.22)");
+    addPath(cheminAlphaDroite, "rgba(59,130,246,0.22)");
+    addPath(cheminPuissanceGauche, "rgba(239,68,68,0.24)");
+    addPath(cheminPuissanceDroite, "rgba(239,68,68,0.24)");
+  }
+
+  graph.appendChild(elt("polyline", {
+    points: polylinePoints(mu0),
+    fill: "none",
+    stroke: "#2563eb",
+    "stroke-width": "3"
+  }));
+
+  graph.appendChild(elt("polyline", {
+    points: polylinePoints(mu1),
+    fill: "none",
+    stroke: "#dc2626",
+    "stroke-width": "3"
+  }));
+
+  function ligneVerticale(x) {
+    graph.appendChild(elt("line", {
+      x1: xToSvg(x), y1: yToSvg(0),
+      x2: xToSvg(x), y2: yToSvg(yMax * 0.95),
+      stroke: "#111827",
+      "stroke-width": "2",
+      "stroke-dasharray": "6 6"
+    }));
+  }
+
+  function etiquette(x, y, texte, fill = "#111827") {
+    graph.appendChild(elt("text", {
+      x: xToSvg(x), y: y,
+      "text-anchor": "middle",
+      "font-size": "15",
+      fill: fill
+    }, texte));
+  }
+
+  if (typeTest === "droite") {
+    ligneVerticale(borneDroite);
+    etiquette(borneDroite, 32, "zone de rejet");
+  } else if (typeTest === "gauche") {
+    ligneVerticale(borneGauche);
+    etiquette(borneGauche, 32, "zone de rejet");
+  } else {
+    ligneVerticale(borneGauche);
+    ligneVerticale(borneDroite);
+    etiquette(borneGauche, 32, "zone de rejet");
+    etiquette(borneDroite, 50, "zone de rejet");
+  }
+
+  graph.appendChild(elt("line", {
+    x1: xToSvg(mu0), y1: yToSvg(0),
+    x2: xToSvg(mu0), y2: yToSvg(densiteNormale(mu0, mu0, sigmaX)),
+    stroke: "#2563eb",
+    "stroke-opacity": "0.35",
+    "stroke-width": "1.5"
+  }));
+
+  graph.appendChild(elt("line", {
+    x1: xToSvg(mu1), y1: yToSvg(0),
+    x2: xToSvg(mu1), y2: yToSvg(densiteNormale(mu1, mu1, sigmaX)),
+    stroke: "#dc2626",
+    "stroke-opacity": "0.35",
+    "stroke-width": "1.5"
+  }));
+
+  graph.appendChild(elt("text", {
+    x: xToSvg(mu0), y: hauteur - 18,
+    "text-anchor": "middle",
+    "font-size": "16",
+    fill: "#2563eb"
+  }, `μ₀ = ${formatNombre(mu0, 1)}`));
+
+  graph.appendChild(elt("text", {
+    x: xToSvg(mu1), y: hauteur - 38,
+    "text-anchor": "middle",
+    "font-size": "16",
+    fill: "#dc2626"
+  }, `μ₁ = ${formatNombre(mu1, 1)}`));
+}
+
+[mu0Input, mu1Input, sigmaInput, nInput, alphaInput, typeTestInput].forEach(el => {
+  el.addEventListener("input", update);
+  el.addEventListener("change", update);
+});
+
+update();
+</script>
+</body>
+</html>

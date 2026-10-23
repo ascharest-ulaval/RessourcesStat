@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guide pour les enseignants : puissance d’un test sur une moyenne</title>
+<style>
+body{margin:0;background:#f2f5fa;color:#263348;font:17px/1.6 system-ui,sans-serif}main{max-width:850px;margin:2rem auto;padding:2rem;background:white;border-radius:12px}h1{font-size:1.9rem;line-height:1.2}h2{font-size:1.3rem;margin-top:2rem;color:#1b264f}a{color:#254b86}li{margin-bottom:.45rem}.draft{font-size:.9rem;color:#59657a}.example{background:#f2f5fa;padding:1rem 1.25rem;border-left:4px solid #1b264f}table{border-collapse:collapse;width:100%;font-size:.95rem}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #d7dee9;padding:.6rem}summary{cursor:pointer;font-weight:600}details{margin-top:1rem} @media(max-width:600px){main{margin:0;padding:1.2rem}}@media print{body{background:white}main{margin:0;padding:0}.draft{color:#333}}
+</style>
+</head>
+<body><main>
+<p class="draft">Guide pour les enseignants · Ébauche à valider</p>
+<h1>Puissance d’un test sur une moyenne</h1>
+<p><a href="index.html">Ouvrir l’applet</a> · <a href="../../Applets.html">Retour aux applets</a></p>
+
+<h2>Intention pédagogique</h2>
+<p>Faire le lien entre la règle de décision d’un test, les distributions de la moyenne échantillonnale et la probabilité de détecter un écart à l’hypothèse nulle. L’applet peut soutenir une démonstration collective ou une exploration en binômes, après une introduction aux tests d’hypothèses et à la distribution de la moyenne.</p>
+
+<h2>Lire le graphique</h2>
+<p>On suppose des observations indépendantes, de même loi normale, avec un écart-type populationnel σ connu. La moyenne X̄ suit alors une loi normale de moyenne μ et d’écart-type σ/√n.</p>
+<ul>
+<li><strong>Courbe bleue :</strong> distribution de X̄ lorsque μ = μ₀, la valeur de référence du test.</li>
+<li><strong>Courbe rouge :</strong> distribution de X̄ lorsque la moyenne réelle est μ₁, la valeur choisie pour évaluer la puissance.</li>
+<li><strong>Traits verticaux pointillés :</strong> limites de la région de rejet.</li>
+<li><strong>Aire bleue dans la région de rejet :</strong> probabilité α de rejeter H₀ lorsque μ = μ₀.</li>
+<li><strong>Aire rouge dans cette même région :</strong> probabilité de rejeter H₀ lorsque μ = μ₁. Pour une valeur μ₁ appartenant à l’hypothèse alternative, c’est la puissance; l’aire rouge restante correspond à β.</li>
+</ul>
+<p>Ce sont des distributions de <strong>moyennes d’échantillons</strong>, pas celles des observations individuelles. L’applet calcule les probabilités à partir de la loi normale; elle ne simule pas d’échantillons.</p>
+
+<h2>Un premier parcours</h2>
+<div class="example"><strong>Réglages proposés :</strong> test unilatéral à droite, μ₀ = 0, μ₁ = 0,4, σ = 1, n = 25 et α = 0,05. Ces réglages sont à saisir; ce ne sont pas tous ceux affichés à l’ouverture.</div>
+<ol>
+<li>Avant de lire la puissance, demander : « Dans quelle région rejetterons-nous H₀? Sous quelle courbe faut-il mesurer la probabilité de détecter l’écart choisi? »</li>
+<li>Repérer la limite de rejet, environ 0,329. La puissance est d’environ 0,639 : si la moyenne réelle est 0,4, environ 64 % des échantillons de taille 25 conduiraient à rejeter H₀ dans des répétitions de cette procédure.</li>
+<li>Modifier un seul réglage à la fois. Faire prédire le changement, observer le résultat, puis demander une explication à partir des courbes et de la région de rejet.</li>
+</ol>
+
+<table><thead><tr><th>À essayer</th><th>Question à discuter</th></tr></thead><tbody>
+<tr><td>Passer de n = 25 à 10, puis à 100.</td><td>Pourquoi les moyennes sont-elles plus concentrées quand n augmente? Quel effet sur la puissance?</td></tr>
+<tr><td>Augmenter σ, puis revenir à 1.</td><td>Comment la dispersion des observations affecte-t-elle celle de X̄ et la détection de l’écart?</td></tr>
+<tr><td>Passer de α = 0,05 à 0,01, puis à 0,10.</td><td>Quel compromis fait-on entre puissance et risque d’erreur de première espèce?</td></tr>
+<tr><td>Rapprocher μ₁ de μ₀, puis les faire coïncider.</td><td>Pourquoi la probabilité de rejet vaut-elle α quand μ₁ = μ₀?</td></tr>
+<tr><td>Comparer les tests à droite, à gauche et bilatéral.</td><td>Où se trouve la région de rejet? Est-elle adaptée au sens de l’écart que l’on cherche à détecter?</td></tr>
+</tbody></table>
+
+<h2>Un défi de synthèse</h2>
+<p>Avec les réglages proposés au départ, trouver la plus petite taille d’échantillon permettant une puissance d’au moins 80 %. Demander une justification et faire préciser pour quelle valeur de la moyenne réelle cette puissance est obtenue.</p>
+<details><summary>Repères pour l’enseignant</summary><p>Le minimum est n = 39, pour une puissance d’environ 0,803. Avec n = 25, les puissances sont d’environ 0,639 pour le test à droite et 0,516 pour le test bilatéral. Ces valeurs sont calculées avec les fonctions de l’applet.</p></details>
+
+<h2>Points à expliciter</h2>
+<ul>
+<li>μ₁ est une moyenne populationnelle envisagée, pas une moyenne observée. La puissance dépend de l’écart que l’on souhaite détecter.</li>
+<li>La puissance n’est ni la probabilité que H₁ soit vraie, ni une valeur p. Ne pas rejeter H₀ ne prouve pas qu’elle est vraie.</li>
+<li>Le sens du test doit être choisi selon la question étudiée, avant l’analyse des données. Pour un test à droite, une moyenne réelle inférieure à μ₀ peut donner une probabilité de rejet inférieure à α.</li>
+<li>Les axes sont ajustés automatiquement : comparer les valeurs et les probabilités affichées, pas seulement la largeur apparente des courbes. Une puissance affichée à 1,000 peut être arrondie.</li>
+<li>L’applet illustre le test normal avec σ connu. Elle ne calcule pas la puissance du test t lorsque σ est estimé à partir de l’échantillon.</li>
+</ul>
+
+</main></body></html>

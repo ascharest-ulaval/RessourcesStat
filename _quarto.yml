@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - applets/**
 
 website:
   title: "Ressources pour enseigner la statistique"
@@ -14,6 +16,8 @@ website:
         text: Statistique à la une
       - href: Ressources.qmd
         text: Ressources
+      - href: Applets.qmd
+        text: Applets
   page-navigation: true
   back-to-top-navigation: true
 

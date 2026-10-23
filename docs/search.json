@@ -432,5 +432,19 @@
     "title": "Ressources",
     "section": "Réfléchir à l’enseignement de la statistique",
     "text": "Réfléchir à l’enseignement de la statistique\n\nRapports GAISE : American Statistical Association\nAnglais · Consulter les rapports\nDes recommandations pour l’enseignement et l’évaluation en statistique. La page rassemble les rapports destinés à l’enseignement scolaire et à l’enseignement supérieur.\n\n\nLes données et leur production\nFrançais · Lire l’article\nUne réflexion sur la place de la production des données dans l’enseignement de la statistique. Noëlle Zendrera, Véronique Dubreil-Frémont, Jean-Marie Marion et Alain Bihan-Poudec (2017), « Les données et leur production : réflexions sur une lacune paradoxale en éducation statistique », Statistique et Enseignement, 8(2), 59–78.\n\n\nTeach statistics before calculus! : Arthur Benjamin\nAnglais · Regarder la conférence\nDans cette conférence TED de 2009, Arthur Benjamin défend une plus grande place pour la statistique dans la formation mathématique. Une prise de position pour amorcer une réflexion sur les objectifs de cet enseignement."
+  },
+  {
+    "objectID": "Applets.html",
+    "href": "Applets.html",
+    "title": "Applets",
+    "section": "",
+    "text": "Des applications interactives pour explorer des méthodes statistiques.\n\n\n  \n    \n  \n  \n    Trois méthodes de régression\n    Comparez Mayer, médiane-médiane et moindres carrés à partir de données québécoises, de vos propres données ou de simulations. Explorez les constructions et l’effet du retrait de points.\n    \n      Ouvrir l’applet\n      Guide pour les enseignants\n    \n  \n\n\n  \n    \n  \n  \n    Puissance d’un test sur une moyenne\n    Explorez l’effet de la taille de l’échantillon, du seuil de signification, de l’écart-type et de la moyenne réelle sur la puissance. Visualisez les zones de rejet pour un test unilatéral ou bilatéral, dans le cas d’une population normale d’écart-type connu.\n    \n      Ouvrir l’applet\n      Guide pour les enseignants\n    \n  \n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Applets.html#trois-méthodes-de-régression",
+    "href": "Applets.html#trois-méthodes-de-régression",
+    "title": "Applets",
+    "section": "Trois méthodes de régression",
+    "text": "Trois méthodes de régression\nComparez les droites de Mayer, médiane-médiane et des moindres carrés à partir de jeux de données québécois ou de vos propres données. Explorez leurs constructions et l’effet du retrait de points, puis comparez les méthodes avec les simulations simples, avancées ou personnalisées.\nConsulter le guide pour les enseignants\nOuvrir l’applet en pleine page"
   }
 ]
