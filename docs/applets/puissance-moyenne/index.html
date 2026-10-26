@@ -157,16 +157,16 @@
         </div>
 
         <div class="results" id="results"></div>
-        <div class="note">Les courbes représentent la distribution de \(\bar X\) sous \(H_0\) et sous \(H_1\).</div>
+        <div class="note">Les courbes représentent la distribution de X̄ pour μ = μ₀ et pour μ = μ₁.</div>
       </div>
 
       <div>
         <svg id="graph" viewBox="0 0 920 470" aria-label="Graphique de puissance"></svg>
         <div class="legend">
-          <div class="legend-item"><span class="line-swatch" style="border-top-color:#2563eb"></span>Distribution de x̄ sous H₀</div>
-          <div class="legend-item"><span class="line-swatch" style="border-top-color:#dc2626"></span>Distribution de x̄ sous H₁</div>
+          <div class="legend-item"><span class="line-swatch" style="border-top-color:#2563eb"></span>Distribution de X̄ pour μ = μ₀</div>
+          <div class="legend-item"><span class="line-swatch" style="border-top-color:#dc2626"></span>Distribution de X̄ pour μ = μ₁</div>
           <div class="legend-item"><span class="box-swatch" style="background:rgba(59,130,246,0.28)"></span>Zone de rejet sous H₀</div>
-          <div class="legend-item"><span class="box-swatch" style="background:rgba(239,68,68,0.30)"></span>Puissance sous H₁</div>
+          <div class="legend-item"><span class="box-swatch" style="background:rgba(239,68,68,0.30)"></span>Probabilité de rejet pour μ = μ₁</div>
         </div>
       </div>
     </div>
@@ -282,6 +282,8 @@ function update() {
     puissance = repartitionNormale(borneGauche, mu1, sigmaX) + (1 - repartitionNormale(borneDroite, mu1, sigmaX));
   }
 
+  const sousAlternative = typeTest === "droite" ? mu1 > mu0 : typeTest === "gauche" ? mu1 < mu0 : mu1 !== mu0;
+  const libelleProbabilite = sousAlternative ? "Puissance" : "Probabilité de rejet";
   let texteZone;
   if (typeTest === "droite") {
     texteZone = `Région de rejet : x̄ ≥ ${formatNombre(borneDroite)}`;
@@ -292,9 +294,9 @@ function update() {
   }
 
   results.innerHTML = `
-    <div><strong>Puissance ≈ ${formatNombre(puissance, 3)}</strong></div>
+    <div><strong>${libelleProbabilite} ≈ ${formatNombre(puissance, 3)}</strong></div>
     <div>${texteZone}</div>
-    <div>Écart-type de x̄ : ${formatNombre(sigmaX, 3)}</div>
+    <div>Écart-type de X̄ : ${formatNombre(sigmaX, 3)}</div>
   `;
 
   const largeur = 920;

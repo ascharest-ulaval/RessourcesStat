@@ -30,3 +30,7 @@ L’applet n’a pas été publiée pendant cette vérification. La validation v
 
 Depuis le dossier Régression : les 19 tests de calcul et les tests d’interface sur DOM simulé passent. Le contrôle `node tests/liens-locaux.cjs` confirme 28 liens locaux et les trois empreintes SHA-256 des sources. Les redirections conservées à l’ancienne racine ciblent les fichiers déplacés. Le navigateur automatisé refuse les URL file://; aucune vérification visuelle après déplacement n’est revendiquée.
 
+
+## Actualisation du 26 octobre 2026
+
+Les descriptions datées ci-dessus sont historiques. Le générateur actuel utilise des erreurs normales en simulation simple, et non uniformes. Les 19 tests de calcul et les tests d’interface passent. Le test des liens accepte désormais le seul script analytics.js partagé à la racine du site : 30 liens vérifiés et trois empreintes sources conformes. La réserve sur le biais et l’EQM pour les relations courbes est maintenant visible et testée sur DOM simulé. Le rendu visuel complet reste à contrôler dans un navigateur.

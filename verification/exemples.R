@@ -1,0 +1,22 @@
+options(digits=12)
+check <- function(x) stopifnot(x)
+mode_values <- function(x) { t<-table(x);if(max(t)==1) numeric() else as.numeric(names(t)[t==max(t)]) }
+D<-list(c(1,2,3,4.5,5),c(0,2,3,4,6),c(1,3,3,3,5),c(1,2,2.5,4.5,5),c(1,2,3,3,11),c(0,3,3,4,4),1:5)
+check(isTRUE(all.equal(sapply(D,mean),c(3.1,3,3,3,4,2.8,3))))
+check(identical(sapply(D,median),c(3,3,3,2.5,3,3,3)))
+check(identical(lapply(D,mode_values),list(numeric(),numeric(),3,numeric(),3,c(3,4),numeric())))
+cat('QELI: moyennes, medianes, modes et etendues\n');print(sapply(D,function(x)c(mean=mean(x),median=median(x),range=diff(range(x)))))
+out<-expand.grid(r=1:6,b=1:6);pairs<-list(list(out$r%%2==0,out$b%%2==0),list(out$r==1,out$r==2),list(out$r%%2==0,out$r%%2==1),list(out$r==6,out$r%%2==0))
+check(identical(sapply(pairs,function(z) mean(z[[2]][z[[1]]])),c(.5,0,0,1)))
+hist<-rbind(rep(4,7),c(1,3,6,8,6,3,1),c(2,8,4,0,4,8,2),c(12,7,4,2,1,1,1));check(all(rowSums(hist)==28))
+wheels<-rbind(c(90,90,90,90),c(120,90,0,150),c(30,90,45,195),c(90,60,90,120));check(all(rowSums(wheels)==360));check(sum(wheels[,3]==0)==1);check(sum(apply(wheels,1,max)>180)==1);check(sum(wheels[,2]!=90)==1)
+for(base in list(1:5,1:6)) {added<-if(length(base)==5)c(3,10)else c(3,3,9);valid<-function(x) mean(x)==4&&median(x)==3&&identical(mode_values(x),3)&&diff(range(x))>diff(range(base));check(valid(c(base,added)));for(k in seq_len(length(added)-1)){target<-4*(length(base)+k)-sum(base);grid<-expand.grid(rep(list(1:target),k));grid<-grid[rowSums(grid)==target,,drop=FALSE];if(nrow(grid))check(!any(apply(grid,1,function(v)valid(c(base,v)))))} }
+q<-rbind(c(0,3,8,13,20),c(0,9,10,11,20),c(0,2,9,18,20));flags<-t(apply(q,1,function(s){b<-s[4]-s[2];l<-s[2];r<-20-s[4];c(b==10,s[3]-s[2]==s[4]-s[3],l>b,r>b,s[3]-s[2]<s[4]-s[3],s[3]-s[2]>l+r)}));check(identical(flags,rbind(c(T,T,F,F,F,F),c(F,T,T,T,F,F),c(F,F,F,F,T,T))))
+x1<-c(-15,3,3,4,5.5,5.5,15);x2<-c(-10,1.5,2.5,5.5,5.5,10);check(mean(x1)==3&&median(x1)==4&&mean(x2)==2.5&&median(x2)==4)
+sds<-sapply(list(x1,x2),function(x)c(n=sqrt(mean((x-mean(x))^2)),n1=sd(x)));check(all(abs(sds-rbind(c(8.29,6.21),c(8.96,6.80)))<.005));print(sds)
+r<-c(cor(c(0,1,2,3,7,8,9,10),c(0,2,1,3,7,9,8,10)),cor(c(1,1,2,2,3,3,4,10),c(7,9,8,6,7,9,8,0)),cor(c(1,1,2,2,3,3,4),c(7,9,8,6,7,9,8)));check(all(abs(r-c(.98,-.87,.08))<.005));print(r)
+received<-list(c(3,4),c(0,4),c(0,2),c(6,3),c(1,5),c(4,1),c(0,0,4,4,4,4),c(0,0,0,3,3,12),c(0,0,0,3,3,18),c(0,1,4,4,4,4),c(0,0,0,3,6,9),c(0,0,3,3,6,12));stakes<-c(1,2,2,2,3,4,rep(3,6));expect<-c(2.5,0,-1,2.5,0,-1.5,-1/3,0,1,-1/6,0,1);letters<-c('AEF','C','BD','AEF','C','BD','AB','CDE','DEF','AB','CDE','DEF')
+for(i in seq_along(received)){net<-received[[i]]-stakes[i];e<-mean(net);check(abs(e-expect[i])<1e-12);f<-c(mean(net>0)>.5,e<0,e==0,any(net==0),any(net>=2*stakes[i]),e>0);check(paste(LETTERS[1:6][f],collapse='')==letters[i])}
+cat('Menu Math: exemples et contraintes numeriques valides.\n')
+for(n in c(10,25,38,39,100))cat('n=',n,' power=',pnorm(qnorm(.95)-.4*sqrt(n),lower.tail=FALSE),'\n')
+cat('bilateral n25:',pnorm(-qnorm(.975)-2)+pnorm(qnorm(.975)-2,lower.tail=FALSE),'\n')
