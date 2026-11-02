@@ -1,6 +1,7 @@
 ---
 title: ""
 format: html
+toc-expand: true
 ---
 
 ## Activités à essayer en classe
