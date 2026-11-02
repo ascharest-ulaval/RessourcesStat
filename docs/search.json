@@ -530,5 +530,12 @@
     "title": "Menu Math",
     "section": "Licence",
     "text": "Licence\nSauf indication contraire, les contributions originales à cette collection et son organisation sont proposées sous licence Creative Commons Attribution – Pas d’utilisation commerciale 4.0 International (CC BY-NC 4.0). Elles peuvent être partagées et adaptées pour des usages non commerciaux, à condition de créditer la source, de fournir un lien vers la licence et de signaler les modifications.\nLe menu de Josh Giesbrecht conserve la licence CC BY-NC annoncée dans sa banque d’origine."
+  },
+  {
+    "objectID": "Secondaire.html#présentations",
+    "href": "Secondaire.html#présentations",
+    "title": "Ressources pour enseigner la statistique",
+    "section": "Présentations",
+    "text": "Présentations\n\nGRMS 2026 - Données, variabilité et simulations\nCet atelier propose des activités et des simulations pour développer le raisonnement statistique au secondaire, en mettant la variabilité au cœur de la démarche. On y explore notamment les questions statistiques, le Recensement à l’école et les méthodes de régression.\nConsulter les diapos du GRMS 2026\n\n\nGRMS 2020 - Atelier sur la régression\nLors du congrès virtuel du  Groupe des Responsables en Mathématiques au Secondaire  en 2020, j’ai fait une présentation sur les différentes méthodes de régression enseignée au secondaire. J’y décris les trois méthodes, en mettant l’accent sur leurs origines, et on les compare d’un point de vue statistique. Voici les diapos et une petite étude de simulation partagée lors de la présentation.\nDroite de régression : comprendre et évaluer différentes méthodes\nSimulation pour comparer les trois méthodes\nCode source pour la simulation (en R)"
   }
 ]

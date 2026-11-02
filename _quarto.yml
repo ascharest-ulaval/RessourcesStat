@@ -3,6 +3,7 @@ project:
   output-dir: docs
   resources:
     - applets/**
+    - presentations/**
     - analytics.js
 
 website:

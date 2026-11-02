@@ -25,7 +25,15 @@ L'exemple ci-dessous a été préparé par une étudiante du cours [STT-2902 Mod
 
 [Téléchargements de TikTok](https://drive.google.com/file/d/1EtNki81zP_vx6ZuafEGcK4hlMsckxNGB/view?usp=drive_link){target="_blank" .dropbox}
 
-## GRMS 2020 - Atelier sur la régression
+## Présentations
+
+### GRMS 2026 - Données, variabilité et simulations
+
+Cet atelier propose des activités et des simulations pour développer le raisonnement statistique au secondaire, en mettant la variabilité au cœur de la démarche. On y explore notamment les questions statistiques, le Recensement à l’école et les méthodes de régression.
+
+[Consulter les diapos du GRMS 2026](presentations/GRMS_2026.html){target="_blank"}
+
+### GRMS 2020 - Atelier sur la régression
 
 Lors du congrès virtuel du <a href= "https://www.grms.qc.ca/" target = "_blank"> Groupe des Responsables en Mathématiques au Secondaire </a> en 2020, j'ai fait une présentation sur les différentes méthodes de régression enseignée au secondaire. J'y décris les trois méthodes, en mettant l'accent sur leurs origines, et on les compare d'un point de vue statistique. Voici les diapos et une petite étude de simulation partagée lors de la présentation.
 
